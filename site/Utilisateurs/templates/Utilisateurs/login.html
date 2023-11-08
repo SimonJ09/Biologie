@@ -1,0 +1,107 @@
+{% extends "Xage/base1.html" %}
+
+{% block content%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Utilisateurs/css/style.css' %}" >
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Get In <span>Touch</span></h2>
+        <h4>
+            {% if messages %}
+            <ul class="messages">
+              {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </h4>
+      </div>
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="form_container">
+            <p style="color: white; text-align: justify;"> 
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has s
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has s
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+            
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has s
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has s
+                since the 1500s, when an unknown printer took a galley of type
+              
+            </p>
+          </div>
+        </div>
+            <div class="col-md-6 px-0">
+              <div class="form_container">
+                <form method="post" class="custom-form" id="info-form">
+
+                  <form action="post">
+                    {% csrf_token %}
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <input type="text" name="nom" class="form-control" placeholder="Your Name" />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-lg-6">
+                        <input type="text" class="form-control" placeholder="Phone Number" />
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <select name="option" id="" class="form-control wide">
+                          <option value="">Select Service</option>
+                          <option value="">Service 1</option>
+                          <option value="">Service 2</option>
+                          <option value="">Service 3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-lg-6">
+                        <input type="text" class="form-control" placeholder="Age" />
+                      </div>
+                      <div class="form-group col-lg-6">
+                        <select name="option" id="" class="form-control wide">
+                          <option value="">Select Sexe</option>
+                          <option value="">Masculin</option>
+                          <option value="">Féminin</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <input type="email" name="email" class="form-control" placeholder="Email" />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <input type="text" class="message-box form-control"  name="message" placeholder="Message" />
+                      </div>
+                    </div>
+                    <div class="btn_box">
+                      <button type="submit" >
+                        SEND
+                      </button>
+                    </div>
+                  </form>
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+  <script src="{% static 'Utlisateurs/js/script.js' %}"></script>
+  {% endblock %}

@@ -1,0 +1,43 @@
+{% extends "Xage/base1.html" %}
+
+{% block content%}
+{% load static %}
+  <!-- portfolio section -->
+  <section class="portfolio_section">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>Our Work Projet</h2>
+        </div>
+        <div class="carousel-wrap">
+            <div class="filter_box">
+                <nav class="owl-filter-bar">
+                    <a href="{% url 'projet' %}" class="item {% if filter_type == 'all' %}active{% endif %}">Tous</a>
+                    <a href="{% url 'projet' %}?filter_type=en_cours" class="item {% if filter_type == 'en_cours' %}active{% endif %}">En cours</a>
+                    <a href="{% url 'projet' %}?filter_type=terminees" class="item {% if filter_type == 'terminees' %}active{% endif %}">Terminées</a>
+                    <a href="{% url 'projet' %}?filter_type=avenir" class="item {% if filter_type == 'avenir' %}active{% endif %}">A venir</a>
+                    <a href="{% url 'projet' %}?filter_type=participer" class="item {% if filter_type == 'participer' %}active{% endif %}">Participer à</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="owl-carousel portfolio_carousel">
+        {% for evenement in evenements %}
+        <div class="item decorative">
+            <div class="box">
+                <div class="img-box">
+                    <img src="{{ evenement.photo.url }}" alt="{{ evenement.titre }}" class="img-fluid" style="max-width: 100%; height: 375px;" />
+                    <div class="btn_overlay">
+                        <a href="{% url 'evenement_detail' evenement.id %}" class="">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+  {% endblock %}
+
+
+
+  
