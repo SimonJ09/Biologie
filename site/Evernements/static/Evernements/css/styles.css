@@ -1,46 +1,70 @@
 /* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio_section {
+    padding: 50px 0;
+}
+
+.heading_container {
+    margin-bottom: 40px;
+}
+
+.heading_container h2 {
+    font-size: 36px;
+    color: #343a40;
+}
+
 .event-details {
-    background-color: #fff;
+    background-color: #ffffff;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .event-details h1 {
-    font-size: 24px;
+    font-size: 28px;
+    color: #007bff;
 }
 
 .event-image {
     max-width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .event-info p {
-    font-size: 16px;
-    margin: 10px 0;
+    font-size: 18px;
+    margin: 15px 0;
+    color: #555;
 }
 
 .download-link {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
 }
 
 .download-link:hover {
